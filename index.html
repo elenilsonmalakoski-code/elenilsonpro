@@ -3,19 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Sustentável | Produtividade e Futuro</title>
+    <meta name="description" content="Plataforma de informações sobre o agronegócio moderno, alta produtividade e práticas sustentáveis.">
+    <title>AgroSustentável | Tecnologia e Produtividade Responsável</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container header-flex">
-            <div class="logo">
-                <i class="fa-solid fa-seedling"></i> <span>Agro<b>Forte</b></span>
-            </div>
-            <nav>
+            <a href="#" class="logo">
+                <i class="fa-solid fa-seedling"></i> Agro<span>Sustentável</span>
+            </a>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#tecn
+                    <li><a href="#pilares">Pilares Estratégicos</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#indicadores">Indicadores</a></li>
+                </ul>
+            </nav>
+            <div class="header-action">
+                <a href="#contato" class="btn btn-outline">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <span class="badge">O Futuro do Campo</span>
+                    <h1>Eficiência Agrícola e Preservação Ambiental</h1>
+                    <p>Conectando inovação tecnológica às melhores práticas de manejo para garantir a segurança alimentar global com pegada de carbono mitigada.</p>
+                    <div class="hero-buttons">
+                        <a href="#pilares" class="btn btn-primary">Conhecer Pilares</a>
+                        <a href="#tecnologia" class="btn btn-secondary">Ver Tecnologias</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-overlay-card">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <div>
+                            <h4>+25%</h4>
+                            <p>Eficiência Hídrica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="pillars-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilares de Sustentabilidade</h2>
+                <p>Diretrizes que unem a força econômica do setor com a conservação dos ecossistemas.</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Manejo Regenerativo</h3>
+                    <p>Práticas como o plantio direto e a rotação de culturas que preservam a microbiota do solo e evitam a erosão.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3>Otimização de Recursos</h3>
+                    <p>Sistemas de irrigação por gotejamento localizado e monitoramento de umidade via sensores IoT.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Conformidade e ESG</h3>
+                    <p>Alinhamento estrito com o Código Florestal Brasileiro, garantindo a preservação legal e o rastreamento total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="tech-section">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-content">
+                    <h2>Agricultura de Precisão</h2>
+                    <p>A transformação digital no campo não é apenas sobre produtividade, é sobre aplicar o insumo correto, na quantidade exata, no momento certo.</p>
+                    
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <i class="fa-solid fa-satellite"></i>
+                            <div>
+                                <h4>Telemetria e Satélites</h4>
+                                <p>Análise de índices de vegetação (NDVI) para detecção precoce de pragas.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-robot">
