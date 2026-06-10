@@ -1,113 +1,115 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plataforma de informações sobre o agronegócio moderno, alta produtividade e práticas sustentáveis.">
-    <title>AgroSustentável | Tecnologia e Produtividade Responsável</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <header class="main-header">
-        <div class="container header-flex">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-seedling"></i> Agro<span>Sustentável</span>
-            </a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pilares">Pilares Estratégicos</a></li>
-                    <li><a href="#tecnologia">Tecnologia</a></li>
-                    <li><a href="#indicadores">Indicadores</a></li>
-                </ul>
-            </nav>
-            <div class="header-action">
-                <a href="#contato" class="btn btn-outline">Contato</a>
-            </div>
-        </div>
-    </header>
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fdf9;
+}
 
-    <section id="inicio" class="hero-section">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <span class="badge">O Futuro do Campo</span>
-                    <h1>Eficiência Agrícola e Preservação Ambiental</h1>
-                    <p>Conectando inovação tecnológica às melhores práticas de manejo para garantir a segurança alimentar global com pegada de carbono mitigada.</p>
-                    <div class="hero-buttons">
-                        <a href="#pilares" class="btn btn-primary">Conhecer Pilares</a>
-                        <a href="#tecnologia" class="btn btn-secondary">Ver Tecnologias</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-overlay-card">
-                        <i class="fa-solid fa-chart-pie"></i>
-                        <div>
-                            <h4>+25%</h4>
-                            <p>Eficiência Hídrica</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-    <section id="pilares" class="pillars-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Pilares de Sustentabilidade</h2>
-                <p>Diretrizes que unem a força econômica do setor com a conservação dos ecossistemas.</p>
-            </div>
-            
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="icon-wrapper">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h3>Manejo Regenerativo</h3>
-                    <p>Práticas como o plantio direto e a rotação de culturas que preservam a microbiota do solo e evitam a erosão.</p>
-                </div>
+/* Tipografia */
+h1, h2, h3 {
+    color: #2c5e1e;
+    margin-bottom: 20px;
+}
 
-                <div class="pillar-card">
-                    <div class="icon-wrapper">
-                        <i class="fa-solid fa-droplet"></i>
-                    </div>
-                    <h3>Otimização de Recursos</h3>
-                    <p>Sistemas de irrigação por gotejamento localizado e monitoramento de umidade via sensores IoT.</p>
-                </div>
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
 
-                <div class="pillar-card">
-                    <div class="icon-wrapper">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3>Conformidade e ESG</h3>
-                    <p>Alinhamento estrito com o Código Florestal Brasileiro, garantindo a preservação legal e o rastreamento total.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    <section id="tecnologia" class="tech-section">
-        <div class="container">
-            <div class="tech-grid">
-                <div class="tech-content">
-                    <h2>Agricultura de Precisão</h2>
-                    <p>A transformação digital no campo não é apenas sobre produtividade, é sobre aplicar o insumo correto, na quantidade exata, no momento certo.</p>
-                    
-                    <div class="tech-list">
-                        <div class="tech-item">
-                            <i class="fa-solid fa-satellite"></i>
-                            <div>
-                                <h4>Telemetria e Satélites</h4>
-                                <p>Análise de índices de vegetação (NDVI) para detecção precoce de pragas.</p>
-                            </div>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fa-solid fa-robot">
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #2c5e1e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(rgba(44, 94, 30, 0.7), rgba(44, 94, 30, 0.7)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #388E3C;
+}
+
+/* Práticas (Grid) */
+.bg-light {
+    background-color: #eef7ee;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto
