@@ -1,115 +1,90 @@
-/* Configurações Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável | Produtividade e Futuro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9fdf9;
-}
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i> <span>AgroForte</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#tecnologia">Tecnologia</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro da Agricultura é Forte e Sustentável</h1>
+            <p>Unindo alta produtividade, tecnologia de ponta e preservação ambiental para alimentar o mundo.</p>
+            <a href="#pilares" class="btn-principal">Saiba Mais</a>
+        </div>
+    </section>
 
-/* Tipografia */
-h1, h2, h3 {
-    color: #2c5e1e;
-    margin-bottom: 20px;
-}
+    <section id="pilares" class="features">
+        <div class="container">
+            <h2>Nossos Pilares</h2>
+            <p class="section-subtitle">Como equilibramos força econômica e responsabilidade ecológica.</p>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Preservação Ativa</h3>
+                    <p>Manejo correto do solo, rotação de culturas e respeito às áreas de preservação permanente (APPs).</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Alta Performance</h3>
+                    <p>Aumento da produtividade por hectare, reduzindo a necessidade de abertura de novas áreas nativas.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3>Gestão Hídrica</h3>
+                    <p>Sistemas de irrigação inteligente e captação de água da chuva para otimizar cada gota.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
+    <section id="tecnologia" class="tech-section">
+        <div class="container tech-flex">
+            <div class="tech-text">
+                <h2>Tecnologia a Serviço do Campo</h2>
+                <p>O agro moderno utiliza drones, sensores IoT, análise de dados via satélite e inteligência artificial para monitorar lavouras em tempo real. Isso se traduz em menos desperdício de insumos, menor impacto ambiental e maior eficiência econômica.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Redução no uso de defensivos químicos</li>
+                    <li><i class="fa-solid fa-check"></i> Monitoramento de carbono no solo</li>
+                    <li><i class="fa-solid fa-check"></i> Tratores e maquinário autônomo</li>
+                </ul>
+            </div>
+            <div class="tech-image-placeholder">
+                <i class="fa-solid fa-satellite-dish"></i>
+                <p>Conectividade Rural</p>
+            </div>
+        </div>
+    </section>
 
-/* Cabeçalho */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AgroForte Sustentável. Desenvolvido para o GitHub.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #2c5e1e;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Seção Hero */
-.hero {
-    background: linear-gradient(rgba(44, 94, 30, 0.7), rgba(44, 94, 30, 0.7)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 20px;
-}
-
-.hero h2 {
-    color: #ffffff;
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-}
-
-/* Botões */
-.btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: #ffffff;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #388E3C;
-}
-
-/* Práticas (Grid) */
-.bg-light {
-    background-color: #eef7ee;
-}
-
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto
+</body>
+</html>
