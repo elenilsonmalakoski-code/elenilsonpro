@@ -1,90 +1,261 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Sustentável | Produtividade e Futuro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <i class="fa-solid fa-leaf"></i> <span>AgroForte</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pilares">Pilares</a></li>
-                    <li><a href="#tecnologia">Tecnologia</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+:root {
+    --primary-color: #2e7d32; /* Verde Agro */
+    --secondary-color: #1565c0; /* Azul Tecnologia/Água */
+    --dark-color: #212121;
+    --light-color: #f5f5f5;
+    --white: #ffffff;
+}
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>O Futuro da Agricultura é Forte e Sustentável</h1>
-            <p>Unindo alta produtividade, tecnologia de ponta e preservação ambiental para alimentar o mundo.</p>
-            <a href="#pilares" class="btn-principal">Saiba Mais</a>
-        </div>
-    </section>
+body {
+    background-color: var(--white);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
 
-    <section id="pilares" class="features">
-        <div class="container">
-            <h2>Nossos Pilares</h2>
-            <p class="section-subtitle">Como equilibramos força econômica e responsabilidade ecológica.</p>
-            
-            <div class="grid-cards">
-                <div class="card">
-                    <i class="fa-solid fa-seedling"></i>
-                    <h3>Preservação Ativa</h3>
-                    <p>Manejo correto do solo, rotação de culturas e respeito às áreas de preservação permanente (APPs).</p>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Alta Performance</h3>
-                    <p>Aumento da produtividade por hectare, reduzindo a necessidade de abertura de novas áreas nativas.</p>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-droplet"></i>
-                    <h3>Gestão Hídrica</h3>
-                    <p>Sistemas de irrigação inteligente e captação de água da chuva para otimizar cada gota.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    <section id="tecnologia" class="tech-section">
-        <div class="container tech-flex">
-            <div class="tech-text">
-                <h2>Tecnologia a Serviço do Campo</h2>
-                <p>O agro moderno utiliza drones, sensores IoT, análise de dados via satélite e inteligência artificial para monitorar lavouras em tempo real. Isso se traduz em menos desperdício de insumos, menor impacto ambiental e maior eficiência econômica.</p>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Redução no uso de defensivos químicos</li>
-                    <li><i class="fa-solid fa-check"></i> Monitoramento de carbono no solo</li>
-                    <li><i class="fa-solid fa-check"></i> Tratores e maquinário autônomo</li>
-                </ul>
-            </div>
-            <div class="tech-image-placeholder">
-                <i class="fa-solid fa-satellite-dish"></i>
-                <p>Conectividade Rural</p>
-            </div>
-        </div>
-    </section>
+/* Cabeçalho */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AgroForte Sustentável. Desenvolvido para o GitHub.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-</body>
-</html>
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.logo i {
+    margin-right: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Banner */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #1b5e20;
+}
+
+/* Pilares (Cards) */
+.features {
+    padding: 80px 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    margin-bottom: 50px;
+    color: #666;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+/* Tecnologia */
+.tech-section {
+    padding: 80px 0;
+}
+
+.tech-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.tech-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tech-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.tech-text p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.tech-text ul {
+    list-style: none;
+}
+
+.tech-text ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.tech-text ul li i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.tech-image-placeholder {
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.tech-image-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: #999;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #999;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--white);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header .container, footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
